@@ -1,0 +1,133 @@
+@import "normalize.less";
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Oswald";
+  src: local("Oswald"), url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local("Oswald Medium"), url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Oswald", "Arial", "sans-serif";
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+
+  &.modal-active {
+    overflow: hidden;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    white-space: inherit;
+    clip: auto;
+}
+
+.container {
+  max-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.page-title {
+  color: #111111;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.page-notice {
+  max-width: 226px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+@green: #68b738;
+@gray: #f2f2f2;
+
+@import "page-header.less";
+@import "logo.less";
+@import "main-nav.less";
+@import "presentation.less";
+@import "btn.less";
+@import "programs.less";
+@import "program.less";
+@import "features.less";
+@import "example.less";
+@import "contacts.less";
+@import "page-footer.less";
+@import "social.less";
+@import "copyright.less";
+@import "main-products.less";
+@import "main-product.less";
+@import "optional-products.less";
+@import "optional-product.less";
+@import "stock.less";
+@import "form.less";

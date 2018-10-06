@@ -4,16 +4,16 @@
     <meta charset="utf-8">
 
     <title>Форма</title>
+
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <header class="page-header">
+   <header class="page-header">
       <div class="container">
         <div class="page-header__logo logo">
           <a href="index.html" class="logo__link">
-            <img src="http://placehold.it/33x38" alt="Логотип 'Cat Energy'" class="logo__icon">
-
-            <img src="http://placehold.it/101x18" alt="Cat energy" class="logo__name">
+            <img src="img/logo-mobile.svg" alt="Логотип 'Cat Energy'" class="logo__img">
           </a>
         </div>
 
@@ -26,7 +26,7 @@
             </li>
 
             <li class="main-nav__item">
-              <a href="catalog" class="main-nav__link">Каталог продукции</a>
+              <a class="main-nav__link">Каталог продукции</a>
             </li>
 
             <li class="main-nav__item">
@@ -60,24 +60,24 @@
           <fieldset class="form__group">
             <legend class="visually-hidden">Выберите тип программы</legend>
 
-            <input type="radio" class="form__radio" id="weithless" name="programType" value="weithless">
+            <input type="radio" class="form__radio visually-hidden" id="weithless" name="programType" value="weithless">
             <label for="weithless" class="form__label">Похудение</label>
 
-            <input type="radio" class="form__radio" id="weight-gain" name="programType" value="weight-gain">
+            <input type="radio" class="form__radio visually-hidden" id="weight-gain" name="programType" value="weight-gain">
             <label for="weight-gain" class="form__label">Набор массы</label>
 
-            <input type="radio" class="form__radio" id="no-know" name="programType" value="no-know">
+            <input type="radio" class="form__radio visually-hidden" id="no-know" name="programType" value="no-know">
             <label for="no-know" class="form__label">Не знаю (Нужен ваш совет)</label>
           </fieldset>
 
-          <fieldset class="form__fieldset form__fieldset_legended">
+          <fieldset class="form__group form__group_legended">
             <legend class="form__group-title">Контактные данные (владельца кота)</legend>
 
             <label for="email" class="form__label form__label_mail">E-mail:<sup>*</sup></label>
-            <input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <input class="form__text-input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
 
             <label for="tel" class="form__label form__label_tel">Телефон:<sup>*</sup></label>
-            <input type="text" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+            <input class="form__text-input" type="text" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
           </fieldset>
 
           <div class="form__group">
@@ -86,19 +86,19 @@
             <textarea class="form__textarea" name="comment" id="textarea" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
 
-          <fieldset class="form__fieldset form__fieldset_legended">
+          <fieldset class="form__group form__group_legended">
             <legend class="form__group-title">Дополнительно</legend>
 
-            <input class="form__checkbox" id="sugar-free" type="checkbox" name="optional" value="sugar-free">
+            <input class="form__checkbox visually-hidden" id="sugar-free" type="checkbox" name="optional" value="sugar-free">
             <label for="sugar-free" class="form__label">Сахарозаменитель</label>
 
-            <input class="form__checkbox" id="water" type="checkbox" name="optional" value="water">
+            <input class="form__checkbox visually-hidden" id="water" type="checkbox" name="optional" value="water">
             <label for="water" class="form__label">Питьевая вода</label>
 
-            <input class="form__checkbox" id="milk" type="checkbox" name="optional" value="milk">
+            <input class="form__checkbox visually-hidden" id="milk" type="checkbox" name="optional" value="milk">
             <label for="milk" class="form__label">Молоко</label>
 
-            <input class="form__checkbox" id="vitamins" type="checkbox" name="optional" value="vitamins">
+            <input class="form__checkbox visually-hidden" id="vitamins" type="checkbox" name="optional" value="vitamins">
             <label for="vitamins" class="form__label">Витамины</label>
           </fieldset>
 
@@ -120,15 +120,13 @@
         </div>
       </div>
 
-      <div class="contacts__map" id="map">
-        <img src="http://placehold.it/320x400" alt="карта">
-      </div>
+      <div class="contacts__map" id="map"></div>
     </section>
 
     <footer class="page-footer">
       <div class="container">
-        <a href="index.html" class="page-footer__logo">
-          <img src="http://placehold.it/101x18" alt="Cat Energy">
+        <a class="page-footer__logo">
+          <img src="img/logo-footer.svg" alt="Cat Energy">
         </a>
 
         <ul class="page-footer__social social">
@@ -149,7 +147,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="copyright__text">HTML Academy</p>
 
-            <img src="http://placehold.it/27x34" alt="HTML Academy" class="copyright__img">
+            <img src="img/htmlacademy.svg" alt="HTML Academy" class="copyright__img">
           </a>
         </div>
       </div>
