@@ -1,18 +1,44 @@
 .main-products {
-
+  padding: 3px 0 0;
 }
 
 .main-products__list {
-
+  border: 1px solid #ededed;
+  margin: 0 -20px;
+  padding: 0 19px;
 }
 
 .main-products__item {
+  position: relative;
 
+   &::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    width: 320px;
+    height: 1px;
+    background-color: #ededed;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.main-product__footer {
+  padding:0 20px 24px;
+  margin: 0 -20px;
+  border: 1px solid #ededed;
+  border-top: none;
 }
 
 .main-products__more-btn {
   display: block;
   width: 100%;
+  padding: 79px 0 7px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -22,6 +48,7 @@
 
 .main-products__notice {
   display: block;
+  margin-bottom: 21px;
   text-align: center;
   font-family: "Arial";
   font-size: 12px;
@@ -31,5 +58,7 @@
 .main-products__show-all-btn {
   display: block;
   width: 100%;
-  padding: 13px 20px 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 20px;
 }

@@ -1,9 +1,16 @@
 .social {
-
+  display: flex;
+  justify-content: center;
+  padding: 22px 0 21px;
+  border: 1px solid #dadada;
+  border-left: none;
+  border-right: none;
 }
 
 .social__item {
-
+  &:not(:last-child) {
+    margin-right: 34px;
+  }
 }
 
 .social__link {

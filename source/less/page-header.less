@@ -1,11 +1,24 @@
 .page-header {
   padding: 11px 0 14px;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e6e6e6;
+  }
 }
 
 .page-header__logo {
 
 }
 
-.page-header__nav {
+// .page-header__nav {
 
-}
+// }
