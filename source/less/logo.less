@@ -1,5 +1,18 @@
 .logo {
+  position: relative;
   width: 191px;
+  padding: 0 0 13px;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    bottom: -1px;
+    left: -20px;
+    background-color: #e6e6e6;
+  }
 }
 
 // .logo__link {
