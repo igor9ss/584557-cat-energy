@@ -47,69 +47,91 @@
           <fieldset class="form__group form__group_cat-data">
             <legend class="visually-hidden">Основная информация о коте</legend>
 
-            <div class="form__entry-field">
-              <label class="form__label" for="name">Имя:<sup>*</sup></label>
-              <input class="form__text-input" name="name" type="text" id="name" placeholder="Барсик" required>
-            </div>
+            <ul class="form__fields">
+              <li class="form__field">
+                <label class="form__label form__label_mr" for="name">Имя:<sup>*</sup></label>
+                <input class="form__text-input form__text-input_flgrow" name="name" type="text" id="name" placeholder="Барсик" required>
+              </li>
 
-            <div class="form__entry-field">
-              <label class="form__label" for="weight">Вес (кг):<sup>*</sup></label>
-              <input class="form__text-input" name="weight" type="number" id="weight" min="0" placeholder="7" required>
-            </div>
+              <li class="form__field">
+                <label class="form__label form__label_mr" for="weight">Вес (кг):<sup>*</sup></label>
+                <input class="form__text-input form__text-input_flgrow" name="weight" type="number" id="weight" min="0" placeholder="7" required>
+              </li>
 
-            <div class="form__entry-field">
-              <label class="form__label" for="age">Возраст (лет):</label>
-              <input class="form__text-input" name="age" type="number" id="age" min="0" placeholder="7">
-            </div>
+              <li class="form__field">
+                <label class="form__label form__label_mr" for="age">Возраст (лет):</label>
+                <input class="form__text-input form__text-input_flgrow" name="age" type="number" id="age" min="0" placeholder="7">
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="form__group form__group_radio">
             <legend class="visually-hidden">Выберите тип программы</legend>
 
-            <input type="radio" class="form__radio visually-hidden" id="weithless" name="programType" value="weithless">
-            <label for="weithless" class="form__label">Похудение</label>
+            <ul class="form__fields">
+              <li>
+                <input type="radio" class="form__radio visually-hidden" id="weithless" name="programType" value="weithless">
+                <label for="weithless" class="form__label form__label_radio">Похудение</label>
+              </li>
 
-            <input type="radio" class="form__radio visually-hidden" id="weight-gain" name="programType" value="weight-gain">
-            <label for="weight-gain" class="form__label">Набор массы</label>
+              <li>
+                <input type="radio" class="form__radio visually-hidden" id="weight-gain" name="programType" value="weight-gain">
+                <label for="weight-gain" class="form__label form__label_radio">Набор массы</label>
+              </li>
 
-            <input type="radio" class="form__radio visually-hidden" id="no-know" name="programType" value="no-know">
-            <label for="no-know" class="form__label">Не знаю (Нужен ваш совет)</label>
+              <li>
+                <input type="radio" class="form__radio visually-hidden" id="no-know" name="programType" value="no-know">
+                <label for="no-know" class="form__label form__label_radio">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset class="form__group form__group_contacts form__group_legended">
-            <legend class="form__group-title">Контактные данные (владельца кота)</legend>
+          <fieldset class="form__group form__group_contacts">
+            <legend class="form__group-title form__group-title_contacts">Контактные данные (владельца кота)</legend>
 
-            <div class="form__entry-field">
-              <label for="email" class="form__label form__label_mail">E-mail:<sup>*</sup></label>
-              <input class="form__text-input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-            </div>
+            <ul class="form__fields">
+              <li class="form__field">
+                <label for="email" class="form__label form__label_mr form__label_mail">E-mail:<sup>*</sup></label>
+                <input class="form__text-input form__text-input_flgrow" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </li>
 
-            <div class="form__entry-field">
-              <label for="tel" class="form__label form__label_tel">Телефон:<sup>*</sup></label>
-              <input class="form__text-input" type="text" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-            </div>
+              <li class="form__field">
+                <label for="tel" class="form__label form__label_mr form__label_tel">Телефон:<sup>*</sup></label>
+                <input class="form__text-input form__text-input_flgrow" type="text" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+              </li>
+            </ul>
           </fieldset>
 
           <div class="form__group form__group_comment">
-            <label for="textarea" class="form__group-title">Комментарий</label>
+            <label for="textarea" class="form__group-title form__group-title_comment">Комментарий</label>
 
             <textarea class="form__textarea" name="comment" id="textarea" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
 
-          <fieldset class="form__group form__group_optional form__group_legended">
-            <legend class="form__group-title">Дополнительно</legend>
+          <fieldset class="form__group form__group_optional">
+            <legend class="form__group-title form__group-title_optional">Дополнительно</legend>
 
-            <input class="form__checkbox visually-hidden" id="sugar-free" type="checkbox" name="optional" value="sugar-free">
-            <label for="sugar-free" class="form__label">Сахарозаменитель</label>
+            <ul class="form__fields">
+              <li>
+                <input class="form__checkbox visually-hidden" id="sugar-free" type="checkbox" name="optional" value="sugar-free">
+                <label for="sugar-free" class="form__label form__label_checkbox">Сахарозаменитель</label>
+              </li>
 
-            <input class="form__checkbox visually-hidden" id="water" type="checkbox" name="optional" value="water">
-            <label for="water" class="form__label">Питьевая вода</label>
+              <li>
+                <input class="form__checkbox visually-hidden" id="water" type="checkbox" name="optional" value="water">
+                <label for="water" class="form__label form__label_checkbox">Питьевая вода</label>
+              </li>
 
-            <input class="form__checkbox visually-hidden" id="milk" type="checkbox" name="optional" value="milk">
-            <label for="milk" class="form__label">Молоко</label>
+              <li>
+                <input class="form__checkbox visually-hidden" id="milk" type="checkbox" name="optional" value="milk">
+                <label for="milk" class="form__label form__label_checkbox">Молоко</label>
+              </li>
 
-            <input class="form__checkbox visually-hidden" id="vitamins" type="checkbox" name="optional" value="vitamins">
-            <label for="vitamins" class="form__label">Витамины</label>
+              <li>
+                <input class="form__checkbox visually-hidden" id="vitamins" type="checkbox" name="optional" value="vitamins">
+                <label for="vitamins" class="form__label form__label_checkbox">Витамины</label>
+              </li>
+            </ul>
           </fieldset>
 
           <button type="submit" class="form__submit-btn btn"> Отправить заявку</button>
@@ -124,7 +146,7 @@
 
       <div class="container">
         <div class="contacts__content">
-          <p class="contacts__motive">приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__motive">приглашаем <br> к сотрудничеству дилеров!</p>
 
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
@@ -135,7 +157,7 @@
 
     <footer class="page-footer">
       <div class="container">
-        <a class="page-footer__logo">
+        <a href="index.html" class="page-footer__logo">
           <img src="img/logo-footer.svg" alt="Cat Energy">
         </a>
 
