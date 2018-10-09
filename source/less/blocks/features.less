@@ -1,0 +1,54 @@
+.features {
+  padding: 17px 0 46px;
+}
+
+.features__title {
+  margin: 0 0 30px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  color: #111111;
+}
+
+.features__list {
+  .list-reset();
+}
+
+.features__item {
+  position: relative;
+  margin-bottom: 26px;
+  padding-left: 80px;
+  font-family: "Arial", sans-serif;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: -2px;
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // &_leaf {
+
+  // }
+
+  // &_chemestry {
+
+  // }
+
+  // &_cutlery {
+
+  // }
+
+  // &_clock {
+
+  // }
+}
