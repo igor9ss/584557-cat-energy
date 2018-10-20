@@ -1,5 +1,15 @@
 .features {
   padding: 17px 0 46px;
+
+  @media (min-width: 768px) {
+    padding: 45px 0 52px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 73px 0 0;
+    border-bottom: none;
+  }
 }
 
 .features__title {
@@ -8,10 +18,24 @@
   font-weight: 400;
   line-height: 60px;
   color: #111111;
+
+  @media (min-width: 768px) {
+    margin-bottom: 74px;
+    font-size: 60px;
+  }
 }
 
 .features__list {
   .list-reset();
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 1440px) {
+    justify-content: space-between;
+  }
 }
 
 .features__item {
@@ -20,8 +44,57 @@
   padding-left: 80px;
   font-family: "Arial", sans-serif;
 
+  @media (min-width: 768px) {
+    width: 50%;
+    padding: 110px 90px 50px 0;
+    margin-bottom: 85px;
+
+    &:nth-child(even) {
+      padding-left: 30px;
+
+      &::before {
+        left: 140px;
+      }
+
+      &::after {
+        left: 30px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    width: 245px;
+    padding: 110px 0 0;
+
+    &:nth-child(even) {
+      padding-left: 0;
+
+      &::before {
+        left: 113px;
+      }
+
+      &::after {
+        left: 0;
+      }
+    }
+  }
+
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &::before {
+    @media (min-width: 768px) {
+      content: "";
+      position: absolute;
+      height: 281px;
+      top: 87px;
+      left: 117px;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 281px;
+      color: #f2f2f2;
+      z-index: -1;
+    }
   }
 
   &::after {
@@ -34,21 +107,82 @@
     background-color: @green;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
-  // &_leaf {
+  &_leaf {
+    &::before {
+      @media (min-width: 768px) {
+        content: "1";
+      }
+    }
 
-  // }
+    &::after {
+      background-image: url("../img/advantage-leaf@1x.png");
+    }
+  }
 
-  // &_chemestry {
+  &_chemestry {
+    &::before {
+      @media (min-width: 768px) {
+        content: "2";
+      }
 
-  // }
+      @media (min-width: 1440px) {
+        left: 0;
+      }
+    }
 
-  // &_cutlery {
+    &::after {
+      background-image: url("../img/advantage-powder@1x.png");
+    }
+  }
 
-  // }
+  &_cutlery {
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
 
-  // &_clock {
+    &::before {
+      @media (min-width: 768px) {
+        content: "3";
+      }
+    }
 
-  // }
+    &::after {
+      background-image: url("../img/advantage-dining@1x.png");
+    }
+  }
+
+  &_clock {
+    @media (min-width: 768px) {
+      padding-right: 70px;
+    }
+
+    @media (min-width: 1440px) {
+      padding-right: 0;
+    }
+
+    &::before {
+      @media (min-width: 768px) {
+        content: "4";
+      }
+    }
+
+    &::after {
+      background-image: url("../img/advantage-clock@1x.png");
+    }
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
 }

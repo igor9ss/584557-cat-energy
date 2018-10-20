@@ -6,6 +6,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.2s ease;
+
+  &:hover {
+    .copyright__svg {
+      fill: @green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
@@ -13,10 +24,16 @@
   font-size: 16px;
   line-height: 16px;
   color: #444444;
+
+  @media (min-width: 768px) {
+    margin-right: 14px;
+  }
 }
 
-.copyright__img {
+.copyright__svg {
   width: 40px;
   height: 40px;
   margin-right: -5px;
+  fill: #666666;
+  transition: 0.2s ease;
 }

@@ -4,6 +4,42 @@
   background-repeat: no-repeat;
   background-position: center top;
   color: #ffffff;
+
+  @media (min-width: 768px) {
+    padding: 41px 0 0;
+    background: none;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 90px 0 0;
+  }
+
+  .container {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media (min-width: 1440px) {
+      display: block;
+      position: relative;
+      min-height: 559px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -222px;
+        right: 1px;
+        width: 720px;
+        height: 696px;
+        background-color: @green;
+        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-size: contain;
+        z-index: -1;
+      }
+    }
+  }
 }
 
 .presentation__title {
@@ -12,16 +48,71 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
+
+  @media (min-width: 768px) {
+    padding: 0 87px;
+    margin-bottom: 41px;
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+    color: #111111;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 0 0 80px;
+    max-width: 510px;
+  }
 }
 
 .presentation__slogan {
+  margin: 0 auto 28px;
   text-align: center;
   line-height: 14px;
   text-transform: uppercase;
-  margin: 0 0 28px;
+
+  @media (min-width: 768px) {
+    padding-left: 88px;
+    margin: 0 0 48px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    color: #111111;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 80px;
+    margin-bottom: 53px;
+  }
+}
+
+.presentation__picture {
+  @media (min-width: 768px) {
+    margin-top: -80px;
+    margin-left: -1px;
+    order: 1;
+  }
+
+  @media (min-width: 1440px) {
+    margin: -314px 218px 0 0;
+    float: right;
+  }
 }
 
 .presentation__btn {
   width: 100%;
   line-height: 18px;
+
+  @media (min-width: 768px) {
+    position: relative;
+    width: auto;
+    padding: 16px 27px;
+    margin-left: 89px;
+    font-size: 20px;
+    line-height: 20px;
+    z-index: 1;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 80px;
+  }
 }
