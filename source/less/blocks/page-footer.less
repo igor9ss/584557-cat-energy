@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 39px 0 0;
+  padding: 39px 0 7px;
   background-color: @gray;
 
   @media (min-width: 768px) {
@@ -27,6 +27,15 @@
   width: 128px;
   height: 25px;
   margin: 0 auto 30px;
+  transition: 0.2s ease;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: 768px) {
     margin: 0 155px 0 0;

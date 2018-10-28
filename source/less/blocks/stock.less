@@ -1,18 +1,30 @@
 .stock {
   min-height: 289px;
-  padding: 188px 0 0;
-  margin-bottom: 35px;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  padding: 188px 58px 0;
+  background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
-}
-
-.stock__text {
-  max-width: 165px;
-  margin: 0 auto;
+  background-position: center top 65px, center top;
+  background-size: 55px 60px, auto;
   text-align: center;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+
+  @media (min-width: 768px) {
+    min-height: 200px;
+    padding: 73px 90px 0 424px;
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@1x.jpg");
+    background-position: left 91px top 65px, center top;
+    text-align: left;
+  }
+
+  @media (min-width: 1440px) {
+    width: 245px;
+    min-height: 289px;
+    padding: 188px 40px 0;
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-desktop@1x.jpg");
+    background-position: center top 65px, center top;
+    text-align: center;
+  }
 }

@@ -1,21 +1,122 @@
 .optional-products {
-  padding: 28px 0 39px;
+  padding: 28px 0 35px;
+
+  @media (min-width: 768px) {
+    padding: 66px 0 69px;
+  }
+
+  @media (min-width: 1440px) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 75px 0 85px;
+  }
 }
 
 .optional-products__title {
+  position: relative;
   margin: 0;
   padding-bottom: 34px;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   color: #111111;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    top: 14px;
+    background-color: @green;
+
+    @media (min-width: 768px) {
+      top: 22px;
+    }
+  }
+
+  &::before {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      left: -30px;
+      width: 28px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 70px;
+      left: -110px;
+      top: 97px;
+    }
+  }
+
+  &::after {
+    width: 53px;
+    right: -20px;
+
+    @media (min-width: 768px) {
+      width: 327px;
+      right: -30px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 957px;
+      right: -110px;
+      top: 97px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 0 0 37px;
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: 1440px) {
+    position: static;
+    padding: 0;
+  }
 }
 
 .optional-products__list {
   .list-reset();
   border-top: 1px solid #cdcdcd;
+
+  @media (min-width: 768px) {
+    border-top: none;
+  }
 }
 
-// .optional-products__item {
+.optional-products__item {
+  @media (min-width: 768px) {
+    border: 1px solid #cdcdcd;
+    border-top: none;
 
-// }
+    &:first-child {
+      border-top: 1px solid #cdcdcd;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    width: 895px;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.optional-products__stock {
+  margin-top: 39px;
+  margin-bottom: 0;
+
+  @media (min-width: 768px) {
+    margin-top: 69px;
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 0;
+  }
+}

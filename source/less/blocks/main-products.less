@@ -1,16 +1,50 @@
 .main-products {
   padding: 3px 0 0;
+
+  @media (min-width: 768px) {
+    padding-top: 140px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 139px;
+  }
 }
 
 .main-products__list {
   .list-reset();
   border: 1px solid #ededed;
+  border-bottom: none;
   margin: 0 -20px;
   padding: 0 19px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
 
 .main-products__item {
   position: relative;
+
+  @media (min-width: 768px) {
+    margin-bottom: 140px;
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 142px;
+
+    &:nth-child(n + 4) {
+      margin-bottom: 0;
+    }
+  }
 
   &::after {
     content: "";
@@ -20,6 +54,10 @@
     width: 320px;
     height: 1px;
     background-color: #ededed;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   &:last-child {
@@ -34,9 +72,21 @@
   margin: 0 -20px;
   border: 1px solid #ededed;
   border-top: none;
+
+  @media (min-width: 768px) {
+    width: 324px;
+    padding: 55px 37px 39px;
+    margin: 0;
+    border-top: 1px solid #ededed;
+  }
+
+  @media (min-width: 1440px) {
+    width: 245px;
+  }
 }
 
 .main-products__more-btn {
+  position: relative;
   display: block;
   width: 100%;
   padding: 79px 0 7px;
@@ -47,15 +97,69 @@
   text-transform: uppercase;
   color: #111111;
   cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    background-color: #d3d3d3;
+    transform: translateX(-50%);
+
+    @media (min-width: 768px) {
+      background-color: #e6e6e6;
+    }
+  }
+
+  &::before {
+    width: 30px;
+    height: 2px;
+    top: 40px;
+
+    @media (min-width: 768px) {
+      width: 60px;
+      top: 28px;
+    }
+  }
+
+  &::after {
+    width: 2px;
+    height: 30px;
+    top: 26px;
+
+    @media (min-width: 768px) {
+      height: 60px;
+      top: -1px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    padding: 109px 0 28px;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
 }
 
 .main-products__notice {
   display: block;
-  margin-bottom: 21px;
+  margin-bottom: 22px;
   text-align: center;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: 768px) {
+    max-width: 175px;
+    margin: 0 auto 87px;
+    font-size: 16px;
+  }
 }
 
 .main-products__show-all-btn {

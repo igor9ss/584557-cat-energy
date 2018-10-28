@@ -6,11 +6,50 @@
   position: absolute;
   top: -47px;
   right: 0;
-  width: 23px;
-  height: 23px;
-  border: none;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
   font-size: 0;
-  background-color: red;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    left: 0;
+    background-color: #222222;
+    transition: 0.2s ease;
+  }
+
+  &::before {
+    top: 4px;
+    box-shadow: 0 8px 0 0 #222222;
+  }
+
+  &::after {
+    bottom: 2px;
+  }
+
+  &_open {
+    &::before {
+      width: 30px;
+      left: -3px;
+      top: 11px;
+      box-shadow: none;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      width: 30px;
+      left: -3px;
+      top: 11px;
+      bottom: auto;
+      transform: rotate(-45deg);
+    }
+  }
 
   @media (min-width: 768px) {
     display: none;
@@ -93,6 +132,16 @@
     @media (min-width: 1440px) {
       &::after {
         background-color: #ffffff;
+      }
+    }
+  }
+
+  &_black {
+    @media (min-width: 1440px) {
+      color: #111111;
+
+      &::after {
+        background-color: @green;
       }
     }
   }
